@@ -1,9 +1,13 @@
 :root {
-  --bg: #0E1320;
-  --surface: #1A2233;
-  --text: #F4EFE6;
-  --muted: #8A93A6;
-  --accent: #E0A955;
+  --bg: #F5F0E8;
+  --surface: #FFFFFF;
+  --text: #2A2620;
+  --muted: #6B6457;
+  --accent-text: #B07D2E;
+  --accent-fill: #E0A955;
+  --line: #E6DECF;
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -11,9 +15,10 @@
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--sans);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .container {
@@ -22,48 +27,72 @@ body {
   padding: 48px 24px 80px;
 }
 
+/* Serif for the sacred: big titles, headings */
 h1, h2, h3 {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--serif);
   font-weight: 600;
   color: var(--text);
-  line-height: 1.25;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
-h1 { font-size: 2.4rem; margin-bottom: 12px; }
-h2 { font-size: 1.4rem; margin: 32px 0 10px; }
-h3 { font-size: 1.1rem; margin: 20px 0 6px; }
+h1 { font-size: 2.6rem; margin-bottom: 14px; }
+h2 { font-size: 1.45rem; margin: 34px 0 10px; }
+h3 { font-size: 1.12rem; margin: 20px 0 6px; }
 
 p, li { color: var(--text); margin-bottom: 14px; }
-a { color: var(--accent); text-decoration: none; }
+a { color: var(--accent-text); text-decoration: none; }
 a:hover { text-decoration: underline; }
+strong { font-weight: 600; }
 .muted { color: var(--muted); font-size: 0.95rem; }
 ul { padding-left: 22px; margin-bottom: 14px; }
 
-.hero { text-align: center; padding: 40px 0 8px; }
-.hero .tag { color: var(--accent); letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem; }
-.hero p.sub { color: var(--muted); font-size: 1.15rem; max-width: 520px; margin: 14px auto 28px; }
+/* Hero */
+.hero { text-align: center; padding: 32px 0 8px; }
+.hero .mark { width: 76px; height: 76px; margin: 0 auto 18px; display: block; }
+.hero .tag {
+  font-family: var(--sans);
+  color: var(--accent-text);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.hero h1 { margin-top: 8px; }
+.hero p.sub { color: var(--muted); font-size: 1.18rem; max-width: 520px; margin: 16px auto 30px; }
 
 .cta {
   display: inline-block;
-  background: var(--accent);
-  color: var(--bg);
+  background: var(--accent-fill);
+  color: var(--text);
+  font-family: var(--sans);
   font-weight: 600;
-  padding: 14px 28px;
+  padding: 14px 30px;
   border-radius: 999px;
+  box-shadow: 0 6px 20px rgba(224, 169, 85, 0.32);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
-.cta:hover { text-decoration: none; opacity: 0.92; }
+.cta:hover { text-decoration: none; transform: translateY(-1px); box-shadow: 0 8px 26px rgba(224, 169, 85, 0.42); }
 
+/* Email capture */
 .form { display: flex; gap: 10px; max-width: 420px; margin: 0 auto; flex-wrap: wrap; justify-content: center; }
 .form input {
   flex: 1; min-width: 200px; padding: 13px 16px; border-radius: 999px;
-  border: 1px solid var(--surface); background: var(--surface); color: var(--text); font-size: 1rem;
+  border: 1px solid var(--line); background: var(--surface); color: var(--text);
+  font-family: var(--sans); font-size: 1rem;
 }
+.form input::placeholder { color: var(--muted); }
+.form input:focus { outline: none; border-color: var(--accent-fill); }
 .form button {
   padding: 13px 24px; border-radius: 999px; border: none;
-  background: var(--accent); color: var(--bg); font-weight: 600; cursor: pointer;
+  background: var(--accent-fill); color: var(--text);
+  font-family: var(--sans); font-weight: 600; cursor: pointer;
 }
+.form button:hover { opacity: 0.92; }
 
-footer { border-top: 1px solid var(--surface); margin-top: 56px; padding-top: 20px; text-align: center; }
+footer { border-top: 1px solid var(--line); margin-top: 56px; padding-top: 20px; text-align: center; }
 footer a { margin: 0 10px; color: var(--muted); }
 
+/* Legal pages */
 .legal a.back { display: inline-block; margin-bottom: 24px; color: var(--muted); }
+.legal h1 { font-size: 2.2rem; }

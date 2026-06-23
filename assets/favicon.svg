@@ -1,0 +1,10 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Eden">
+  <rect width="512" height="512" rx="112" fill="#F5F0E8"/>
+  <g fill="none" stroke="#E0A955" stroke-linecap="round">
+    <!-- open ring, gap centered at the bottom -->
+    <path d="M 319.4 367.9 A 150 150 0 1 0 192.6 367.9" stroke-width="16"/>
+    <!-- cross -->
+    <line x1="256" y1="150" x2="256" y2="410" stroke-width="30"/>
+    <line x1="172" y1="250" x2="340" y2="250" stroke-width="30"/>
+  </g>
+</svg>
