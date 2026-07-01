@@ -23,7 +23,7 @@
     <ul>
       <li>Eden has no accounts and no login.</li>
       <li>Your name, answers, and prayer history are stored <strong>on your device</strong>.</li>
-      <li>With your explicit consent, prayer and chat text is processed by Cloudflare and Anthropic. If you use Listen, the generated text is also processed by OpenAI to create audio.</li>
+      <li>When you request a prayer or reply, that text is processed by Cloudflare and Anthropic. If you use Listen, the generated text is also processed by OpenAI to create audio.</li>
       <li>Eden does not persist prayer, chat, or audio content on its servers. We do not sell your data.</li>
     </ul>
 
@@ -32,7 +32,7 @@
     <p>Your name, onboarding answers, chosen reminder time, streak, and your saved prayers and messages are stored locally on your device. We do not have a copy of this on our servers.</p>
 
     <h3>Prayer and chat generation</h3>
-    <p>After you explicitly agree in the app, your first name and the text you submit for a prayer or in "Talk to God" are sent over an encrypted connection to our processing service on <strong>Cloudflare</strong> and to <strong>Anthropic</strong>. They process this content only to return the prayer or reply you requested. Eden does not write this content to its server databases or logs.</p>
+    <p>When you request a prayer or a reply in "Pray with Eden", your first name and the text you submit are sent over an encrypted connection to our processing service on <strong>Cloudflare</strong> and to <strong>Anthropic</strong>. They process this content only to return the prayer or reply you requested. Eden does not write this content to its server databases or logs.</p>
 
     <h3>Listen and audio generation</h3>
     <p>If you choose Listen, the generated prayer or reply is sent over an encrypted connection through Cloudflare to <strong>OpenAI</strong> to create audio. The audio is streamed back to your device with caching disabled. Eden does not store the submitted text or generated audio in its server databases.</p>
@@ -68,7 +68,6 @@
 
     <h2>Your choices</h2>
     <ul>
-      <li><strong>Withdraw consent:</strong> In Eden, open Profile → Privacy &amp; data → Withdraw AI consent. Eden then blocks future prayer, chat, and Listen requests until you explicitly agree again.</li>
       <li><strong>Delete cloud data:</strong> In Eden, open Profile → Privacy &amp; data → Delete cloud data. This deletes Eden's usage ledger and App Attest registration and requests permanent deletion of the associated RevenueCat customer record and purchase history.</li>
       <li><strong>Delete local data:</strong> Deleting the app removes the name, onboarding answers, prayer history, messages, and streak stored on your device.</li>
       <li><strong>Subscriptions:</strong> Cloud-data deletion and app deletion do not cancel an Apple subscription. You can manage or cancel it in your Apple account settings.</li>
