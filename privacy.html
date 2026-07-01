@@ -15,7 +15,7 @@
   <div class="container legal">
     <a class="back" href="index.html">← Eden</a>
     <h1>Privacy Policy</h1>
-    <p class="muted">Last updated: June 20, 2026</p>
+    <p class="muted">Last updated: June 24, 2026</p>
 
     <p>This Privacy Policy explains how Eden ("Eden", "we", "us") handles information when you use the Eden mobile app. By using Eden, you agree to this policy.</p>
 
@@ -23,15 +23,22 @@
     <ul>
       <li>Eden has no accounts and no login.</li>
       <li>Your name, answers, and prayer history are stored <strong>on your device</strong>.</li>
-      <li>The text you submit to generate a prayer is sent to our server and our AI provider to create your prayer, then returned to you. We do not sell your data.</li>
+      <li>With your explicit consent, prayer and chat text is processed by Cloudflare and Anthropic. If you use Listen, the generated text is also processed by OpenAI to create audio.</li>
+      <li>Eden does not persist prayer, chat, or audio content on its servers. We do not sell your data.</li>
     </ul>
 
     <h2>Information we process</h2>
     <h3>Stored on your device only</h3>
     <p>Your name, onboarding answers, chosen reminder time, streak, and your saved prayers and messages are stored locally on your device. We do not have a copy of this on our servers.</p>
 
-    <h3>Sent to generate a prayer</h3>
-    <p>When you request a prayer or send a message in "Talk to God", the text you write (for example, what is weighing on you) and your first name are sent over an encrypted connection to our processing service (hosted on Cloudflare) and to our AI provider, <strong>Anthropic</strong>, solely to generate the prayer or reply that is returned to you. This content is processed to provide the feature and is not used to train AI models. We do not retain this text on our own servers beyond what is needed to return your prayer.</p>
+    <h3>Prayer and chat generation</h3>
+    <p>After you explicitly agree in the app, your first name and the text you submit for a prayer or in "Talk to God" are sent over an encrypted connection to our processing service on <strong>Cloudflare</strong> and to <strong>Anthropic</strong>. They process this content only to return the prayer or reply you requested. Eden does not write this content to its server databases or logs.</p>
+
+    <h3>Listen and audio generation</h3>
+    <p>If you choose Listen, the generated prayer or reply is sent over an encrypted connection through Cloudflare to <strong>OpenAI</strong> to create audio. The audio is streamed back to your device with caching disabled. Eden does not store the submitted text or generated audio in its server databases.</p>
+
+    <h3>Security and usage records</h3>
+    <p>To prevent fraud and enforce free-use and daily limits, Eden processes a random RevenueCat app user identifier, an App Attest public-key registration and counter, and limited usage-ledger entries. These records do not contain your prayer or chat content. Daily counters expire automatically after approximately two days. Other records remain until you use the in-app deletion control or they are no longer operationally necessary.</p>
 
     <h3>Subscriptions</h3>
     <p>Purchases are processed by <strong>Apple</strong>. We use <strong>RevenueCat</strong> to manage subscription status. RevenueCat receives a randomly generated app user identifier and purchase information to tell the app whether your subscription is active. We never receive your full payment details.</p>
@@ -52,14 +59,21 @@
       <li><strong>RevenueCat</strong> — subscription management.</li>
       <li><strong>Cloudflare</strong> — secure request processing.</li>
       <li><strong>Anthropic</strong> — AI generation of prayers and replies.</li>
+      <li><strong>OpenAI</strong> — temporary audio generation when you use Listen.</li>
     </ul>
-    <p>Each provider handles data under its own privacy policy.</p>
+    <p>We limit each provider to the data needed for its stated function and require it to protect that data under applicable service and data-processing terms. Each provider also publishes its own privacy policy.</p>
 
     <h2>Children</h2>
     <p>Eden is not directed to children under 13, and we do not knowingly collect personal information from them.</p>
 
     <h2>Your choices</h2>
-    <p>Because your data lives on your device, deleting the app removes it. You can manage or cancel your subscription anytime in your Apple account settings.</p>
+    <ul>
+      <li><strong>Withdraw consent:</strong> In Eden, open Profile → Privacy &amp; data → Withdraw AI consent. Eden then blocks future prayer, chat, and Listen requests until you explicitly agree again.</li>
+      <li><strong>Delete cloud data:</strong> In Eden, open Profile → Privacy &amp; data → Delete cloud data. This deletes Eden's usage ledger and App Attest registration and requests permanent deletion of the associated RevenueCat customer record and purchase history.</li>
+      <li><strong>Delete local data:</strong> Deleting the app removes the name, onboarding answers, prayer history, messages, and streak stored on your device.</li>
+      <li><strong>Subscriptions:</strong> Cloud-data deletion and app deletion do not cancel an Apple subscription. You can manage or cancel it in your Apple account settings.</li>
+    </ul>
+    <p>If the in-app deletion control is unavailable, email <a href="mailto:edensupport@gmail.com">edensupport@gmail.com</a> and include the anonymous Eden identifier shown in the prefilled support message.</p>
 
     <h2>Not medical or pastoral advice</h2>
     <p>Eden provides AI-generated prayers and encouragement. It is not a substitute for professional counseling, medical advice, or pastoral care. If you are struggling with your mental health, please reach out to a licensed professional. If you are in crisis, contact your local emergency services.</p>

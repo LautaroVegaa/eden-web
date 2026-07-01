@@ -3,11 +3,12 @@
 Static site: landing page + Privacy Policy + Terms of Use. Separate from the iOS
 app repo on purpose.
 
-## Before publishing — fill these placeholders
-- `CONTACT_EMAIL` (in privacy.html + terms.html) → your support email.
-- `[JURISDICTION]` (in terms.html) → e.g. "Argentina".
-- App Store URL (in index.html, the Download button `href="#"`) → once the app is live.
-- `YOUR_FORM_ID` (in index.html form) → a free Formspree form id, or remove the form.
+## Before publishing
+
+- Replace the "Coming soon" status with the live App Store URL after Apple makes
+  the product page available.
+- Confirm that `edensupport@gmail.com` is actively monitored.
+- Have counsel review the governing-law and privacy language for the operating entity.
 
 ## Hosting (Cloudflare Pages — you already have Cloudflare)
 1. Push this folder to its own GitHub repo (e.g. `eden-web`).
